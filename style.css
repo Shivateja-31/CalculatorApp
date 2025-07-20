@@ -25,12 +25,12 @@ input {
   border: none;
   outline: none;
   border-radius: 10px;
-  background: white;
+  background: black;
   color: #0A0F3C;
 }
 input:hover {
-      background: white;
-      box-shadow: 0 0 10px white, 0 0 50px white;
+      background: black;
+      box-shadow: 0 0 10px black, 0 0 50px black;
 }
 
 @keyframes fadeInDown {
