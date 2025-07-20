@@ -1,0 +1,175 @@
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: no-repeat;
+}
+
+
+.calculator {
+    background: #2B103C;
+    background: linear-gradient(90deg, rgba(43, 16, 60, 1) 0%, rgba(61, 42, 93, 1) 35%, rgba(87, 40, 102, 1) 100%);
+    border: 1px solid (rgba(10, 15, 60, 1) 0%, rgba(44, 93, 169, 1) 35%, rgba(200, 218, 249, 1) 100%);
+    box-shadow: 0 8px 32px 0 (rgba(10, 15, 60, 1) 0%, rgba(44, 93, 169, 1) 35%, rgba(200, 218, 249, 1) 100%);
+    padding: 20px;
+    border-radius: 15px;
+}
+input {
+  width: 100%;
+  height: 60px;         /* Increased height */
+  font-size: 36px;      /* Larger text size */
+  text-align: right;
+  margin-bottom: 20px;
+  padding: 0 20px;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  background: white;
+  color: #0A0F3C;
+}
+input:hover {
+      background: white;
+      box-shadow: 0 0 10px white, 0 0 50px white;
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+input {
+  animation: fadeInDown 0.4s ease-in-out;
+  animation-delay: 0.1s;
+}
+
+
+h2 {
+  text-align: center;
+  font-style: italic;
+  font-size: 30px;
+  margin-bottom: 20px;
+  background: linear-gradient(90deg, #00f0ff, #39ff14);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 80px);
+    grid-gap: 10px;
+}
+button {
+    border: none;
+    font-size: 20px;
+    border-radius: 50%;
+    height: 60px;
+    font-size: 1.2rem;
+    background: #4D52B4;
+    background: linear-gradient(90deg, rgba(77, 82, 180, 1) 0%, rgba(78, 156, 232, 1) 50%, rgba(112, 214, 197, 1) 100%);
+    box-shadow: 0 8px 32px 0  (rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);
+    cursor: pointer;
+    transition: background 0.4s;
+    color: black;
+}
+button:hover {
+    background: #0A0F3C;
+}
+button.zero {
+    grid-column: span 1;
+}
+button:active {
+    transform: scale(1.05);
+    box-shadow: 0 0px 4px solid #0A0F3C;
+}
+button:hover {
+  background: cyan;
+  box-shadow: 0 0 10px cyan, 0 0 50px cyan;
+}
+
+
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+button {
+  animation: fadeInUp 0.4s ease-in-out;
+  animation-delay: 0.1s;
+}
+
+
+
+#bg-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;   
+  height: 100vh;     
+  object-fit: cover;
+  z-index: -10;
+  opacity: 0.9;
+  filter: blur(1px) brightness(1.2); 
+}
+
+
+/* Make content visible above the video === */
+body,
+.home,
+.header,
+.about,
+.about-container,
+.about-content,
+.quick-highlights,
+.profile-container {
+  position: relative;
+  z-index: 1;
+}
+
+.input-wrapper {
+  display: flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  overflow: hidden;
+  padding-left: 10px;
+  margin-bottom: 20px;
+}
+
+#display {
+  flex: 5;
+  height: 60px;
+  font-size: 24px;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: white;
+  padding: 0 20px;
+}
+
+#micBtn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+#micBtn .material-icons {
+  font-size: 28px;
+}
